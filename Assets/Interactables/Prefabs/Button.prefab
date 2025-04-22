@@ -135,7 +135,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  pressDepth: 0.1
+  pressDepth: 0.2
   pressSpeed: 5
   interactionRange: 2
 --- !u!1 &7716006154480545287

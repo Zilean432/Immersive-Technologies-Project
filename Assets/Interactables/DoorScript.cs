@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DoorScript : MonoBehaviour
 {
-    public Vector3 openOffset = new Vector3(0, 0, 2f); // how far it slides open
+    public Vector3 localOpenOffset = new Vector3(0, 0, 2f); // Local space offset
     public float slideSpeed = 3f;
 
     private Vector3 closedPosition;
@@ -15,7 +15,7 @@ public class DoorScript : MonoBehaviour
     void Start()
     {
         closedPosition = transform.position;
-        openPosition = closedPosition + openOffset;
+        openPosition = closedPosition + transform.TransformDirection(localOpenOffset);
     }
 
     void Update()
