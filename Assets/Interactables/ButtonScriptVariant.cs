@@ -10,6 +10,7 @@ public class ButtonScriptVariant : MonoBehaviour
     public float pressSpeed = 5f;
     public float interactionRange = 2f;
     public float pressDuration = 0.2f;
+    public AudioClip buttonSound;
 
     private Vector3 originalLocalPos;
     private Vector3 pressedLocalOffset;
@@ -64,6 +65,7 @@ public class ButtonScriptVariant : MonoBehaviour
         }
 
         onPress.Invoke();
+        AudioSource.PlayClipAtPoint(buttonSound, transform.position);
 
         yield return new WaitForSeconds(pressDuration);
 

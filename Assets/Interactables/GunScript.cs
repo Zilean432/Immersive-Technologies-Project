@@ -9,6 +9,7 @@ public class GunScript : MonoBehaviour
     public GameObject projectileBlue;
     public GameObject projectileRed;
     public GameObject projectileGreen;
+    public AudioClip shootSound;
 
     private bool isHeld = false;
     private float firingMode = 0;
@@ -28,14 +29,17 @@ public class GunScript : MonoBehaviour
         {
             case 0:
                 GameObject projectile0 = Instantiate(projectileBlue, firePoint.position, firePoint.rotation);
+                AudioSource.PlayClipAtPoint(shootSound, firePoint.position);
                 break;
 
             case 1:
                 GameObject projectile1 = Instantiate(projectileRed, firePoint.position, firePoint.rotation);
+                AudioSource.PlayClipAtPoint(shootSound, firePoint.position);
                 break;
 
             case 2:
                 GameObject projectile2 = Instantiate(projectileGreen, firePoint.position, firePoint.rotation);
+                AudioSource.PlayClipAtPoint(shootSound, firePoint.position);
                 break;
         }
     }

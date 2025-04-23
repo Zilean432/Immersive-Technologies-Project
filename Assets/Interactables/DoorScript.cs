@@ -6,6 +6,7 @@ public class DoorScript : MonoBehaviour
 {
     public Vector3 localOpenOffset = new Vector3(0, 0, 2f); // Local space offset
     public float slideSpeed = 3f;
+    public AudioClip doorSound;
 
     private Vector3 closedPosition;
     private Vector3 openPosition;
@@ -37,5 +38,6 @@ public class DoorScript : MonoBehaviour
     {
         isOpen = !isOpen;
         isMoving = true;
+        AudioSource.PlayClipAtPoint(doorSound, transform.position);
     }
 }

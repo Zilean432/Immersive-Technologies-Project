@@ -14,6 +14,7 @@ public class EndButtonScript : MonoBehaviour
     public MeshRenderer buttonRenderer;
     public Material lockedMaterial;
     public Material unlockedMaterial;
+    public AudioClip buttonSound;
 
     private Vector3 originalLocalPosition;
     private bool isPressed = false;
@@ -69,6 +70,7 @@ public class EndButtonScript : MonoBehaviour
     {
         isPressed = !isPressed;
         onPress.Invoke();
+        AudioSource.PlayClipAtPoint(buttonSound, transform.position);
     }
 
     private void UpdateMaterial()

@@ -72,7 +72,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4019393163272697082}
   - component: {fileID: 859586422194452885}
-  - component: {fileID: 9038282726372881011}
   - component: {fileID: 5792656189578561301}
   - component: {fileID: 1972074718981790768}
   - component: {fileID: 7705102118267192106}
@@ -121,19 +120,8 @@ MonoBehaviour:
   projectileBlue: {fileID: 7548052103761517760, guid: e4f690d92cc26b64ab9ce9272196a870, type: 3}
   projectileRed: {fileID: 7548052103761517760, guid: b6ac581af944e224f832b2fa80818ef0, type: 3}
   projectileGreen: {fileID: 7548052103761517760, guid: d44984fd8d85aaf4e8294b05e7474223, type: 3}
+  shootSound: {fileID: 8300000, guid: 46fd9591b7b4f454cae613ac32a78afc, type: 3}
   usingXR: 0
---- !u!114 &9038282726372881011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5688357809553129970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53e5c23d4ccb8d647a904a75f8b01b0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &5792656189578561301
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -623,6 +611,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4019393163272697082}
     m_Modifications:
+    - target: {fileID: 304076132921004220, guid: 2bb3480d4ab451545848f9f4d5eb4055, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 954846489169248101, guid: 2bb3480d4ab451545848f9f4d5eb4055, type: 3}
       propertyPath: onPress.m_PersistentCalls.m_Calls.Array.size
       value: 1

@@ -9,6 +9,7 @@ public class ButtonScript : MonoBehaviour
     public float pressDepth = 0.25f;
     public float pressSpeed = 5f;
     public float interactionRange = 2f;
+    public AudioClip buttonSound;
 
     private Vector3 originalLocalPosition;
     private bool isPressed = false;
@@ -53,5 +54,6 @@ public class ButtonScript : MonoBehaviour
     {
         isPressed = !isPressed;
         onPress.Invoke();
+        AudioSource.PlayClipAtPoint(buttonSound, transform.position);
     }
 }

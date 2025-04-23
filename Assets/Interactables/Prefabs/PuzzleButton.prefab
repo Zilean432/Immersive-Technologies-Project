@@ -256,6 +256,7 @@ MonoBehaviour:
   pressSpeed: 10
   interactionRange: 2
   pressDuration: 0.1
+  buttonSound: {fileID: 8300000, guid: 9fa012941d75b2d418c9d1bb7ad98760, type: 3}
 --- !u!54 &1536328592436276893
 Rigidbody:
   m_ObjectHideFlags: 0
